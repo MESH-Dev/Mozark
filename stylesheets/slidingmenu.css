@@ -1,0 +1,172 @@
+/*SLIDINGrevslidemenu.CSS*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*This CSS file contains style rules for Sliding revslidemenu*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Author: Designova.*/
+/* Website: http://www.designova.net */
+/* Copyright: (C) 2013 */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.revslidemenu {
+	position: fixed;
+	left: -200px;
+	width: 260px;
+	height: 100%;
+	top: 0;
+	z-index: 9999999999999999999999999999999;
+	text-align: left;
+
+}
+
+.revslidemenu.revslidemenu-open {
+	left: 0px;
+}
+
+.sm-wrap {
+	position: absolute;
+	top: 0;
+	right: 60px;
+	background: #111;
+	width: 200px;
+	height: 100%;
+		overflow: auto;
+}
+
+.revslidemenu h1.sm-logo{
+	font-family:"Open Sans";
+	font-size: 32px;
+	line-height: 44px;
+	color: #fff;
+	margin: 20px 10px;
+	font-weight: 800;
+}
+
+
+.revslidemenu img.sm-logo {
+	margin: 20px 0;
+	max-width: 160px;
+}
+
+.revslidemenu a {
+	margin:0px;
+	margin-bottom: 2px;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	letter-spacing: 2px;
+	font-weight: 200;
+	line-height: 21px;
+	font-family:"Open Sans";
+	background:rgba(255,255,255,0.1);
+	padding: 10px;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+}
+
+.revslidemenu a:hover {
+	color: #000;
+	background: #EB4B27;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+}
+
+.revslidemenu a:active {
+	color: #ffffff;
+}
+
+.revslidemenu-close {
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	font-size: 14px;
+	color: #000;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	line-height: 40px;
+	top: 40px;
+	right: 250px;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+.revslidemenu-close:hover {
+	color: #ffffff;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+/* Push the body after clicking the revslidemenu button */
+.sliding {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.sliding-toright {
+	left: 200px;
+}
+
+.sliding-toleft {
+	left: -200px;
+}
+
+.revslidemenu,
+.sliding {
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+		-ms-transition: all .3s ease;
+		 -o-transition: all .3s ease;
+			transition: all .3s ease;
+}
+
+#sm-trigger {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	z-index: 99999999999999 !important;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #ffffff;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	cursor: pointer;
+	background: rgba(0,0,0,0.2) url('../images/menu.png') center center no-repeat;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+#sm-trigger:hover {
+	color: #ffffff;
+	background: #444 url('../images/menu.png') center center  no-repeat;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min--moz-device-pixel-ratio: 1.3), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 1.3), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+	#sm-trigger 
+	{
+			background: rgba(0,0,0,0.5) url('../images/menu@2x.png') center center no-repeat;
+					 background-size: 40px 40px;
+	}
+}

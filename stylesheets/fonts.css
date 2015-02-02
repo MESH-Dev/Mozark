@@ -1,0 +1,299 @@
+/*FONTS.CSS*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Template Name: SECRET.
+// Version: 1.0 Initial Release 
+// Author: Unbranded.*/
+/* Website: http://www.Unbranded.co */
+/* Copyright: (C) 2013 */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* FONTS ARE DEFINED HERE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.section-heading{
+	font-family: "Playfair Display";
+	font-weight: 700; 
+}
+.sub-heading{
+	font-family: "Raleway";
+	font-weight: 400;
+}	
+.button a, .button-01 a, .button-02 a{
+	font-family: "Raleway";
+	font-weight: 400;
+}
+.home-slider-item01 h1{
+	font-family: "Playfair Display";
+	font-weight: 900;
+}
+.home-slider-item01 h2{
+	font-family: "Crimson Text";
+	font-weight: 600;
+}
+.home-slider-item02 h2{
+	font-family: "Crimson Text";
+	font-weight: 600;
+}
+.home-slider-item02 h1{
+	font-family: "Playfair Display";
+	font-weight: 900;
+}
+.home-slider-item02 h3{
+	font-family: "Playfair Display";
+	font-weight: 900;
+}
+.main-header ul li a{
+	font-family: "Raleway";
+	font-weight: 400;
+}
+.about-content h4{
+	font-family: "Playfair Display";
+	font-weight: 700;
+}	
+.about-content p{
+		font-family: "Merriweather";
+	font-weight: 400;
+}
+.team-member-name h4{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.team-member-name p{
+	font-family: "Crimson Text";
+	font-weight: 400;
+}
+.portfolio-filter-nav ul li a{
+	font-family: "Raleway";
+	font-weight: 600;
+}
+.portfolio-item-mask h3{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.portfolio-item-mask h5{
+	font-family: "Crimson Text";
+	font-weight: 600;
+}
+.testimonial p{
+	font-family: "Crimson Text";
+	font-weight: 600;
+}
+.testimonial h1{
+	font-family: "Crimson Text";
+	font-weight: 600;
+}
+.testimonial h3{
+	font-family: "Crimson Text";
+	font-weight: 400;
+}
+.testimonial h5{
+	font-family: "Crimson Text";
+	font-weight: 400;
+}
+.services-column h4{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.services-column p{
+	font-family: "Merriweather";
+	font-weight: 400;
+}
+.pricing-head h5{
+	font-family: "Raleway";
+	font-weight: 400;
+}
+.pricing-head h1{
+	font-family: "Crimson Text";
+	font-weight: 700;
+}
+.pricing-head p{
+	font-family: "Crimson Text";
+	font-weight: 700;
+}
+.pricing-features ul li{
+	font-family: "Merriweather";
+	font-weight: 400;
+}
+.blog-item-text h4{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.blog-item-text h5{
+	font-family: "Crimson Text";
+	font-weight: 400;
+}
+.blog-item-text p{
+	font-family: "Merriweather";
+	font-weight: 400;
+}
+.contact-address h1{
+	font-family: "Crimson Text";
+	font-weight: 400;
+}
+.contact-address h2{
+	font-family: "Crimson Text";
+	font-weight: 700;
+}
+.contact-address p{
+	font-family: "Crimson Text";
+	font-weight: 400;
+}
+.contact-form label{
+	font-family: "Crimson Text";
+    font-weight: 400;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-family: "Crimson Text";
+    font-weight: 400;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family: "Crimson Text";
+    font-weight: 400;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family: "Crimson Text";
+    font-weight: 400;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-family: "Crimson Text";
+    font-weight: 400;
+}
+.contact-form button{
+	font-family: "Raleway";
+	font-weight: 400;
+	font-style: normal !important;
+}
+.alert p{
+	 font-family: "Crimson Text";
+    font-weight: 600;
+}
+.footer p{
+	 font-family: "Crimson Text";
+    font-weight: 400;
+}
+
+.blog-home h1{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.blog-home h4{
+	font-family: "Crimson Text:italic";
+    font-weight: 400;
+}
+.blog-post-text h1{
+	font-family: "Playfair Display";
+    font-weight: 600;
+}
+.blog-post-text h5{
+	font-family: "Crimson Text";
+    font-weight: 400;
+}
+.blog-post-text p{
+	font-family: "Merriweather";
+    font-weight: 400;
+}
+.blog-text-post h1{
+	font-family: "Crimson Text";
+    font-weight: 600;
+}
+.blog-quote-post h1{
+	font-family: "Crimson Text";
+    font-weight: 600;
+}
+.blog-quote-post h4{
+	font-family: "Crimson Text";
+    font-weight: 400;
+}
+.blog-post-details-text h4{
+	font-family: "Playfair Display";
+    font-weight: 600;
+}
+.blog-post-details-text-quote h3{
+	font-family: "Crimson Text";
+    font-weight: 600;
+}
+.blog-post-details-text-quote h4{
+	font-family: "Crimson Text";
+    font-weight: 400;
+}
+.blog-post-share-text p{
+	font-family: "Crimson Text";
+    font-weight: 400;
+}
+.blog-post-share-social-icons h4{
+	font-family: "Playfair Display";
+    font-weight: 600;
+}
+.blog-post-comments h1{
+	font-family: "Playfair Display";
+    font-weight: 600;
+}
+.blog-comment-spec h5{
+	font-family: "Playfair Display";
+    font-weight: 600;	
+}
+.blog-comment-spec h6{
+	font-family: "Crimson Text";
+    font-weight: 400;	
+}
+.blog-comment-spec a{
+	font-family: "Crimson Text";
+    font-weight: 400;	
+}
+.blog-comment-spec p{
+	font-family: "Merriweather";
+    font-weight: 400;	
+}
+.blog-post-contact-form h1{
+	font-family: "Playfair Display";
+    font-weight: 600;	
+}
+.blog-next-prev h4{
+	font-family: "Crimson Text";
+    font-weight: 600;
+}
+.related-post-text h4{
+	font-family: "Playfair Display";
+    font-weight: 600;	
+}
+.related-post-text h5{
+	font-family: "Crimson Text";
+    font-weight: 400;
+}
+.single-project-home h1{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.single-project-home h4{
+	font-family: "Crimson Text";
+    font-weight: 400;
+}
+.single-project-text h2{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.single-project-text p{
+	font-family: "Merriweather";
+    font-weight: 400;
+}
+.single-project-details h3{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.single-project-details h4{
+	font-family: "Crimson Text";
+    font-weight: 400;
+}
+.single-project-share h4{
+	font-family: "Playfair Display";
+	font-weight: 600;
+}
+.thanks-page p{
+	font-family: "Crimson Text";
+    font-weight: 900;
+}
+.thanks-page span{
+	font-family: "Playfair Display";
+	font-weight: 400;
+}
+
+			

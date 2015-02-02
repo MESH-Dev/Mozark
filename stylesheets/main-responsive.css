@@ -1,0 +1,945 @@
+/*MAIN-RESPONSIVE.CSS*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*This is main CSS file that contains responsive style rules used in this template*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Template Name: SECRET.*/
+/* Author: Unbranded.*/
+/* Website: http://www.unbranded.co */
+/* Copyright: (C) 2014 */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*==========================*/
+/*MOBILE DEVICE OPTIMIZATION*/
+/*===========================*/
+/*Huge Displays*/
+@media (min-width: 3000px) {
+	  .menu{
+	 	display: none;
+	 	visibility: hidden;
+	 }
+	 .container{
+	    max-width:1100px;
+	}
+
+}
+
+/*Projector Screens and Ver Large Monitors*/
+@media (min-width: 2561px) {
+	  .menu{
+	 	display: none;
+	 	visibility: hidden;
+	 }
+
+}
+
+
+/*iMac 27, HD Screens and Large Monitors*/
+@media (min-width: 1921px) and (max-width: 2560px) {
+	  .menu{
+	 	display: none;
+	 	visibility: hidden;
+	 }
+}
+
+
+/*Large Widescreen Monitors*/
+@media (max-width: 1920px) {
+	  .menu{
+	 	display: none;
+	 	visibility: hidden;
+	 }
+}
+
+/*Medium Widescreen Monitors*/
+@media (max-width: 1680px) {
+	  .menu{
+	 	display: none;
+	 	visibility: hidden;
+	 }
+
+}
+
+/*Large Widescreen Laptops*/
+@media (max-width: 1440px) {
+	  .menu{
+	 	display: none;
+	 	visibility: hidden;
+	 }
+
+}
+
+/*Common Widescreen Laptops*/
+@media (max-width: 1366px) {
+	  .menu{
+	 	display: none;
+	 	visibility: hidden;
+	 }
+
+}
+
+
+/*Very Large Tablets and Medium Laptops*/
+@media (max-width: 1280px) {
+	.menu{
+	 	display: none;
+	 	visibility: hidden;
+	}
+
+}
+
+/*Notebooks and Small Laptops*/
+@media (max-width: 1152px) {
+	.container{
+		width: 1050px;
+	}
+	.menu{
+	 	display: none;
+	 	visibility: hidden;
+	}
+	.portfolio-item img{
+		height: 400px;
+		width: 320px;
+	}
+	.portfolio-item-mask{
+		height: 340px;
+		width: 260px;
+	}
+	.portfolio-item-mask h3{
+		left: -78%;
+	}
+	.portfolio-item-mask:hover h3{
+		left: 14%;
+	}
+	.pricing-head{
+		padding: 30px;
+		padding-bottom: 0px;
+	}
+	.pricing-head h1{
+		font-size: 50px;
+		line-height: 57px;
+	}
+	.sland{
+		width: 232px;
+	}
+	.pricing-features{
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+	.blog-item-text{
+		padding: 25px 40px;
+	}
+
+
+}
+
+/*iPad Landscape Mode and Large Tablets */
+@media (max-width: 1024px) {
+	.menu{
+	 	display: none;
+	 	visibility: hidden;
+	}
+	.container{
+		width: 970px;
+	}
+	.main-header img{
+		margin: 0px 90px 0px 20px;
+	}
+	.down-scroll-position{
+		display: none;
+	}
+	.team-slider.owl-theme .owl-controls .owl-buttons div{
+		display: none;
+	}
+	.services-slider.owl-theme .owl-controls .owl-buttons div{
+		display: none;
+	}
+	.portfolio-item{
+		width: 320px;
+		height: 400px;
+	}
+	.portfolio-item img{
+		width: 290px;
+		height: 370px;
+	}
+	.portfolio-item-mask{
+		height: 310px;
+		width: 230px;
+		bottom: 15px;
+	}
+	.portfolio-item-mask h3{
+		left: -86%;
+	}
+	.portfolio-item-mask:hover h3{
+		left: 8%;
+	}
+	.portfolio-item-mask h5{
+		right: -22%;
+	}
+	.sland{
+		width: 213px;
+	}
+	.blog-header img{
+		margin: 0 70px 0 30px;
+	}
+	.blog-post-text h1{
+		font-size: 28px;
+		line-height: 35px; 
+	}
+	.blog-post-text h5{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.single-project-header img{
+		margin: 0 70px 0 30px;
+	}
+}
+
+/*Small Desktop and Very Small Notebook */
+@media (max-width: 960px) {
+	.menu{
+	 	display: none;
+	 	visibility: hidden;
+	}
+	.container{
+		width: 900px;
+		max-width: 900px;
+	}
+	.main-header img{
+		margin: 0px 80px 0px 10px;
+	}
+	.main-header ul li{
+		margin-left: 20px;
+	}
+	.button-01, .button-02{
+		font-size: 11px;
+		line-height: 18px;
+		padding: 8px 35px;
+	}
+	.section-heading{
+		font-size: 30px;
+		line-height: 37px;
+	}
+	.home-title h1{
+		font-size: 65px;
+		line-height: 55px;
+	}
+	.team-member-name{
+		margin-bottom: 30px;
+	}
+	.portfolio-item{
+		width: 300px;
+		height: 380px;
+	}
+	.portfolio-item img{
+		width: 270px;
+		height: 360px;
+	}
+	.portfolio-item-mask{
+		height: 300px;
+		width: 210px;
+		bottom: 5px;
+	}
+	.portfolio-item-mask h3{
+		font-size: 21px;
+		line-height: 28px;
+		left: -88%;
+	}
+	.portfolio-item-mask:hover h3{
+		left: 8%;
+	}
+	.portfolio-item-mask h5{
+		font-size: 16px;
+		line-height: 23px;
+	}
+	.services-column{
+		padding: 40px;
+	}
+	.pricing-column{
+		margin-bottom: 30px;
+	}
+	.sland{
+		width: 420px;
+	}
+	.blog-item-text{
+		padding: 30px 35px;
+	}
+	.blog-item-text h4{
+		font-size: 16px;
+		line-height: 23px;
+		margin-bottom: 20px;
+		padding-bottom: 15px;
+	}
+	.blog-item-text h5{
+		margin-bottom: 0px;
+	}
+	.blog-item-text p{
+		font-size: 13px;
+		line-height: 16px;
+	}
+	.contact-address h2{
+		font-size: 28px;
+		line-height: 35px;
+		padding: 20px 40px;
+	}
+	.blog-post-text h1{
+		font-size: 27px;
+		line-height: 34px;
+	}
+	.related-post-text{
+		margin-bottom: 30px;
+		padding: 25%;
+	}
+	.single-project-home h1{
+		font-size: 33px;
+		line-height: 40px;
+	}
+}
+
+/*Medium Tablets */
+@media (max-width: 800px) {
+	.menu{
+	 	display: none;
+	 	visibility: hidden;
+	}
+	.container{
+		width: 740px;
+	}
+
+}
+
+/*iPad Portrait Mode, iPad Mini and Small Tablets */
+@media (max-width: 768px) {
+	.container{
+	    width: 718px;
+	}
+	.main-header{
+		display: none;
+		visibility: hidden;
+	}
+	.menu{
+	 	display: block;
+	 	visibility: visible;
+	 }
+	 .pad-bottom{
+	 	padding-bottom: 100px;
+	 }
+	 .pad-top{
+	 	padding-top: 100px;
+	 }
+	.page-section{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.sub-heading{
+		font-size: 12px;
+		line-height: 19px;
+	}
+	.button-01, .button-02{
+		padding: 8px 20px;
+	}
+	.home-slider.owl-theme .owl-controls .owl-pagination{
+		display: none;
+	}
+	.portfolio-item{
+		width: 355px;
+		height: 435px;
+	}
+	.portfolio-item img{
+		width: 325px;
+		height: 405px;
+	}
+	.portfolio-item-mask{
+		width: 265px;
+		height: 345px;
+		bottom: 15px;
+	}
+	.portfolio-item-mask h3{
+		font-size: 24px;
+		line-height: 31px;
+		left: -88%;
+	}
+	.portfolio-item-mask:hover h3{
+		left: 14%;
+	}
+	.portfolio-item-mask h5{
+		font-size: 18px;
+		line-height: 25px;
+	}
+	.services-column{
+		padding: 25px;
+	}
+	.sland{
+		width: 330px;
+	}
+	.blog-item{
+		width: 100%;
+	}
+	.blog-item-display iframe{
+		margin-bottom: -6px;
+	}
+	.blog-item-text{
+		padding: 80px 80px;
+	}
+	.blog-item-text h4{
+		font-size: 18px;
+		line-height: 25px;
+		margin-bottom: 30px;
+		padding-bottom: 20px;
+	}
+	.blog-item-text h5{
+		margin-bottom: 0px;
+	}
+	.blog-item-text p{
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.item-position-02{
+		float: right;
+	}
+	.item-position-03{
+		float: left;
+	}
+	.blog-item-text img{
+		display: none;
+	}
+	.blog-post-slider.owl-theme .owl-controls .owl-buttons div{
+		display: none;
+	}
+	.single-project-text h2{
+		font-size: 27px;
+		line-height: 34px;
+	}
+	.single-project-details h4{
+		font-size: 16px;
+		line-height: 23px;
+	}
+	.blog-post-comments {
+    	padding-top: 75px;
+	}
+	.blog-post-text h1 {
+    	font-size: 24px;
+    	line-height: 31px;
+	}
+	.blog-post-comments h1{
+		font-size: 30px;
+		line-height: 37px;
+	}
+	.blog-post-text h1:after{
+		margin-top: 20px;
+	}
+	.blog-post-text h5{
+		margin-top: 10px;
+	}
+	.blog-quote-post h4:after{
+		margin-top: 20px;
+	}
+	.thanks-page p {
+    	font-size: 90px;
+    	line-height: 97px;
+	}
+	.thanks-page span {
+    	font-size: 50px;
+    	line-height: 57px;
+	}
+}
+
+/*Medium Smart Phones v2*/
+@media screen and (max-width: 640px) {
+	.container{
+		width: 600px;
+	}
+	.section-heading {
+    	font-size: 25px;
+    	line-height: 31px;
+	}
+	.home-title h1{
+		font-size: 55px;
+		line-height: 50px;
+	}
+	.down-scroll-position{
+		display: none;
+	}
+	.about-content div{
+		margin-bottom: 50px;
+		margin-left: 125px;
+		margin-right: 125px;
+	}
+	.portfolio-item{
+		width: 295px;
+		height: 355px;
+	}
+	.portfolio-item img{
+		width: 265px;
+		height: 325px;
+	}
+	.portfolio-item-mask {
+		margin: 25px;
+    	bottom: 15px;
+    	height: 275px;
+    	left: 15px;
+    	width: 215px;
+	}
+	.portfolio-item-mask h3{
+		font-size: 19px;
+		line-height: 26px;
+		left: -88%;
+	}
+	.portfolio-item-mask:hover h3{
+		left: 14%;
+	}
+	.portfolio-item-mask h5{
+		font-size: 16px;
+		line-height: 23px;
+		right: -21%;
+	}
+	.testimonial-owl.owl-theme .owl-controls .owl-page{
+		display: none;
+	}
+	.testimonial h5{
+		margin-bottom: 20px;
+	}
+	.pricing-column{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	.sland{
+		width: 370px;
+	}
+	.contact-address h1{
+		font-size: 30px;
+		line-height: 37px;
+	}
+	.blog-item-text{
+		padding: 50px 60px;
+	}
+	.blog-home{
+		padding: 50px 0px;
+	}
+	.blog-home h1{
+		font-size: 32px;
+		line-height: 39px;
+	}
+	.blog-home h4{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.button a{
+		font-size: 12px;
+		line-height: 19px;
+	}
+	.blog-post-slider.owl-theme .owl-controls .owl-pagination{
+		display: none;
+	}
+	.blog-post-details-text-quote h3{
+		font-size: 22px;
+		line-height: 29px;
+	}
+	.blog-next-prev{
+		padding-bottom: 50px;
+   		padding-top: 50px;
+	}
+	.blog-next-prev h4{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.blog-post-share-social-icons h4{
+		margin-right: 10px;
+	}
+	.share-social-icon{
+		margin-right: 6px;
+		margin-left: 6px;
+	}
+	.related-post-column img{
+		width: 100%;
+	}
+	.related-projects img{
+		margin-bottom: 30px;
+	}
+	.single-project-home{
+		padding: 50px 0px;
+	}
+	.single-project-home h1{
+		font-size: 32px;
+   		line-height: 39px;
+	}
+	.single-project-slider.owl-theme .owl-controls .owl-buttons div{
+		display: none;
+	}
+	.single-project-slider.owl-theme .owl-controls .owl-pagination{
+		display: none;
+	}
+} 
+
+/*Google Nexus and Other Large Smart Phones v1*/
+@media screen and (max-width: 600px) {
+	.container{
+		width: 560px;
+	}
+	.home-title h2{
+		font-size: 25px;
+		line-height: 32px;
+	}
+	.down-scroll-position{
+		bottom: 9%;
+	}
+	.portfolio-item{
+		width: 275px;
+		height: 335px;
+	}
+	.portfolio-item img{
+		width: 245px;
+		height: 305px;
+	}
+	.portfolio-item-mask{
+		width: 195px;
+		height: 255px;
+		bottom: 15px;
+		left: 15px;
+	}
+	.portfolio-item-mask h3{
+		font-size: 19px;
+		line-height: 26px;
+		left: -88%;
+	}
+	.portfolio-item-mask:hover h3{
+		left: 11%;
+	}
+	.portfolio-item-mask h5{
+		font-size: 16px;
+		line-height: 23px;
+		right: -21%;
+	}
+	.testimonial-owl.owl-theme .owl-controls{
+		bottom: -15%;
+	}
+	.sland{
+		width: 330px;
+	}
+	.blog-item-text p{
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.blog-item-text{
+		padding: 40px 60px;
+	}
+	.blog-post-text h1{
+		font-size: 22px;
+		line-height: 29px;
+	}
+	.thanks-page p {
+    	font-size: 80px;
+    	line-height: 87px;
+	}
+	.thanks-page span {
+    	font-size: 40px;
+    	line-height: 47px;
+	}	
+
+} 
+
+/*iPhone Landscape Mode and Mediium Smart Phones*/
+@media screen and (max-width: 480px) {
+	.container{
+		width: 440px;
+	}
+	.pad-top{
+		padding-top: 75px;		
+	}
+	.pad-bottom{
+		padding-bottom: 75px; 
+	}
+	.pad-bottom-half{
+		padding-bottom: 40px;
+	}
+	.home-title h1{
+		font-size: 45px;
+		line-height: 45px;
+	}
+	.home-title h2{
+		font-size: 22px;
+		line-height: 29px;
+		margin: 0px;
+	}
+	.home-title p{
+		font-size: 13px;
+		line-height: 16px;
+		margin-top: 0px;
+	}
+	.about-content div{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	.portfolio-item{
+		width: 365px;
+		height: 445px;
+		margin-left: 40px
+	}
+	.portfolio-item img{
+		width: 335px;
+		height: 415px;
+	}
+	.portfolio-item-mask {
+	    bottom: 15px;
+	    height: 355px;
+	    left: 15px;
+	    width: 275px;
+	    margin: 30px;
+	}
+	.portfolio-item-mask h3{
+		font-size: 24px;
+		line-height: 31px;
+		left: -88%;
+	}
+	.portfolio-item-mask:hover h3{
+		left: 16%;
+	}
+	.portfolio-item-mask h5{
+		font-size: 18px;
+		line-height: 25px;
+		right: -18%;
+	}	
+	.portfolio-filter-nav ul li{
+		margin-bottom: 25px;
+	}
+	.testimonial h1{
+		font-size: 27px;
+		line-height: 34px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.testimonial h3{
+		font-size: 21px;
+		line-height: 28px;
+	}
+	.blog-item-text{
+		padding: 20px 35px;
+	}
+	.blog-item-text h4{
+		font-size: 16px;
+		line-height: 23px;
+		padding-bottom: 15px;
+		margin-bottom: 20px;
+	}
+	.blog-item-text p{
+		font-size: 12px;
+		line-height: 19px;
+	}
+	.pricing-column{
+		margin-left: 75px;
+		margin-right: 75px;
+	}
+	.sland{
+		width: 260px;
+	}
+	.blog-post-text p{
+		font-size: 12px;
+		line-height: 19px;
+	}
+	.blog-comment-image{
+		display: none;
+	}
+	.blog-comment-spec{
+		float: left;
+	}
+	.blog-post-comments ul{
+		padding-left: 0px;
+	}
+	.blog-post-text p {
+    	font-size: 13px;
+    	line-height: 20px;
+	}
+	.blog-post-share-social-icons{
+		margin-top: 15px;
+	}
+	.blog-comment-spec p{
+		font-size: 13px;
+		line-height: 20px;
+		margin-top: 12px;
+	}
+	.related-post-text h4{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	
+
+}
+/*Other Major Small Smart Phones*/
+@media screen and (max-width: 360px) {
+	body{
+		width: 100%;
+		overflow-x: hidden; 
+	}
+	.container{
+		width: 340px;
+	}
+	.page-section{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	.section-heading{
+		font-size: 26px;
+		line-height: 33px;
+	}
+	.home-title{
+		border-top: 0px;
+		border-bottom: 0px;
+	}
+	.home-slider-item02 img{
+		display: none;
+	}
+	.home-slider-item02 h3{
+		font-size: 35px;
+		line-height: 42px;
+	}
+	.about-content div{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.about-content p{
+		font-size: 12px;
+		line-height: 19px;
+	}
+	.about-content h4:after{
+		margin-top: 5px;
+	}
+	.about-content h4{
+		font-size: 17px;
+		line-height: 24px;
+	}
+	.portfolio-item{
+		width: 300px;
+		height: 380px;
+		margin-left: 20px;
+	}
+	.portfolio-item img{
+		width: 270px;
+		height: 360px;
+	}
+	.portfolio-item-mask {
+    	bottom: 5px;
+    	height: 300px;
+    	width: 210px;
+	}
+	.portfolio-item-mask h3{
+		font-size: 21px;
+		line-height: 28px;
+		left: -88%;
+	}
+	.portfolio-item-mask:hover h3{
+		left: 10%;
+	}
+	.portfolio-item-mask h5{
+		font-size: 16px;
+		line-height: 23px;
+		right: -22%;
+	}
+	.testimonial h1{
+		font-size: 24px;
+		line-height: 31px;
+	}
+	.testimonial h3{
+		font-size: 19px;
+		line-height: 26px;
+	}
+	.blog-item{
+		margin-bottom: 30px;
+	}
+	.blog-item-display{
+		width: 100%;
+	}
+	.blog-item-text{
+		width: 100%;
+		padding: 55px 80px;
+	}
+	.blog-item-text p{
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.testimonial{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.pricing-column{
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	.contact-address h1{
+		font-size: 25px;
+		line-height: 32px;
+	}
+	.contact-address h2{
+		font-size: 20px;
+		line-height: 27px;
+		padding: 10px 25px;
+	}
+	.contact-address p{
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.blog-home h1{
+		font-size: 30px;
+		line-height: 37px;
+	}
+	.blog-post-text h1{
+		font-size: 	19px;
+		line-height: 24px;
+	}
+	.blog-post-comments h1{
+		font-size: 24px;
+		line-height: 31px;
+		padding-bottom: 15px;
+	}
+	.single-project-home h1{
+		font-size: 26px;
+		line-height: 33px;
+	}
+	.single-project-home h4{
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.single-project-text p{
+		font-size: 12px;
+		line-height: 19px;
+	}
+	.single-project-share h4{
+		font-size: 16px;
+    	margin-right: 5px;
+	}
+	.single-project-share a{
+		margin-left: 4px;
+		margin-right: 4px;
+	}
+	.thanks-page p {
+    	font-size: 55px;
+    	line-height: 62px;
+	}
+	.thanks-page span {
+    	font-size: 25px;
+    	line-height: 32px;
+	}
+}
+/*iPhone Portrait Mode and Very Small Mobile Phones*/
+@media screen and (max-width: 320px) {
+
+	.container{
+		width: 300px;
+	}
+	.blog-item-text{
+		padding: 40px 60px;
+	}
+	.sland{
+		width: 220px;
+	}
+	.portfolio-item{
+		margin-left: 0px;
+	}
+	.share-social-icon{
+		margin-right: 4px;
+		margin-left: 4px;
+	}
+	.blog-post-share-social-icons h4{
+		margin-right: 6px;
+	}
+
+
+}
