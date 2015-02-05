@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Template Name: The One Page
  *
@@ -7,7 +7,7 @@
  */
 get_header();
 global $secret_thm;
-$secret_count = 0; 
+$secret_count = 0;
 //$secret_countPages = wp_count_posts('page')->publish;
 $secret_pages = get_pages( 'sort_order=asc&sort_column=menu_order&depth=1');
 $secret_totalOnepages = 0;
@@ -15,7 +15,7 @@ $secret_totalOnepages = 0;
 foreach($secret_pages as $secret_pag):
   $secret_include_onepage = get_post_meta($secret_pag->ID,'secret_include_onepage',true );
   $secret_templ_name      = get_post_meta($secret_pag->ID, '_wp_page_template', true );
-  $secret_filename        = preg_replace('"\.php$"', '', $secret_templ_name); 
+  $secret_filename        = preg_replace('"\.php$"', '', $secret_templ_name);
   if($secret_include_onepage == 1 &&  $secret_filename !='the-onepage') { $secret_totalOnepages++; }
 endforeach;
 
@@ -24,9 +24,9 @@ foreach($secret_pages as $secret_pag):
 
 setup_postdata($secret_pag);
 //Anchor point and title
-$secret_new_title       =  strtolower(preg_replace('/[^a-zA-Z]/s', '', $secret_pag->post_name)); 
+$secret_new_title       =  strtolower(preg_replace('/[^a-zA-Z]/s', '', $secret_pag->post_name));
 $secret_templ_name      =  get_post_meta($secret_pag->ID, '_wp_page_template', true );
-$secret_filename        =  preg_replace('"\.php$"', '', $secret_templ_name); 
+$secret_filename        =  preg_replace('"\.php$"', '', $secret_templ_name);
 //Check wether to include in one page
 $secret_include_onepage =  get_post_meta($secret_pag->ID,'secret_include_onepage',true );
 $secret_enb_parallax    =  get_post_meta($secret_pag->ID,'secret_enb_parallax',true );
@@ -46,9 +46,9 @@ $secret_bg_image        =   get_post_meta($secret_pag->ID,'secret_page_bg',true)
 if($secret_bg_color !=''){ $secret_bg_color = $secret_bg_color; } else {$secret_bg_color ='#FFF';}
 
 if($secret_include_onepage == 'on') { $secret_count++; }
-if($secret_include_onepage == 'on' AND $secret_count == '2') 
-{ 
-  if($secret_thm['menu_location'] == 1):  
+if($secret_include_onepage == 'on' AND $secret_count == '2')
+{
+  if($secret_thm['menu_location'] == 1):
     secret_center_menu($mode="onepage");
   else:
     secret_native_menu($mode="onepage");
@@ -63,7 +63,7 @@ $secret_page_subheading   =  get_post_meta($secret_pag->ID,'secret_page_subheadi
 --------------------------------------*/
 if($secret_include_onepage == 'on' AND $secret_filename == 'hero-section')
    {
-//cooking Parallax Overlay 
+//cooking Parallax Overlay
 
   $par_ovl_open  = '<div class="full-height sec_overlay" style="background:rgba('.secret_hex2rgb($secret_bg_color).',0.5);">';
   $par_ovl_close = '</div>';
@@ -78,29 +78,29 @@ if($secret_include_onepage == 'on' AND $secret_filename == 'hero-section')
 
 ?>
 
-<div id="<?php echo $secret_new_title;?>" class="home full-height" style="background:<?php echo $abj; ?> <?php echo $secret_bg_color; ?>;">
-  <?php echo $par_ovl_open; ?>     
+<div id="<?php echo $secret_new_title;?>" class="home full-height" >
+  <?php echo $par_ovl_open; ?>
     <?php if($secret_enb_container != 'on'): ?>
-     <div class="container">      
+     <div class="container">
       <?php the_content();?>
     </div>
     <?php else: ?>
       <?php the_content();?>
     <?php endif; ?>
-  <?php echo $par_ovl_close; ?>     
+  <?php echo $par_ovl_close; ?>
   </div>
 </div>
 
-      
-<?php 
-} 
+
+<?php
+}
 
 /*-------------------------------------
 Default One-Page Section - Blog Template
 --------------------------------------*/
 elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
 {
-//cooking Parallax Overlay 
+//cooking Parallax Overlay
   if($secret_enb_parallax == 'on')
   {
      $par_ovl_open  = '<div class="parallax-ovl" style="background:rgba('.secret_hex2rgb($secret_bg_color).',0.9);">';
@@ -113,7 +113,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
      $par_ovl_close ='';
      $par_class     = '';
   }
-  
+
  //Padding Adjusters
   $padding = '';
   if($secret_pad_top !=''):
@@ -121,7 +121,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
   endif;
   if($secret_pad_bottom !=''):
    $padding   .= ' padding-bottom:'.$secret_pad_bottom.'px;';
-  endif;  
+  endif;
   if($secret_bg_image!=''): $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;"; else: $abj=''; endif;
 ?>
 <section id="<?php echo $secret_new_title;?>" class="page-section" style="background:<?php echo $abj; ?> <?php echo $secret_bg_color; ?>;">
@@ -130,14 +130,14 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
 
       <!-- Add Padding for container less pages -->
       <?php if($secret_enb_title != 'on'): ?>
-       <div class="container"> 
+       <div class="container">
         <div class="row">
                 <div class="col-md-12">
           <h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1>
           <p class="sub-heading text-center"><?php echo $secret_page_subheading; ?></p>
-          </div>  
+          </div>
         </div>
-        </div> 
+        </div>
        </div>
      <?php endif; ?>
 
@@ -147,9 +147,9 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
       <section class="blog-contents">
       <?php
 
-      $loop = new WP_Query( array( 'post_type' => 'post', 'orderby' => 'date', 'order' => 'DESC','posts_per_page' => 10,'paged'=>false) ); 
-      while ($loop->have_posts() ): 
-      $loop->the_post();  
+      $loop = new WP_Query( array( 'post_type' => 'post', 'orderby' => 'date', 'order' => 'DESC','posts_per_page' => 10,'paged'=>false) );
+      while ($loop->have_posts() ):
+      $loop->the_post();
       //Check if included for One Page
       $enabled_on_onep    =  get_post_meta($post->ID,'secret_post_showonepage',true);
 
@@ -174,7 +174,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
 
         case 'none':
           $thumb_pos = '';
-          $pos_img   = '';        
+          $pos_img   = '';
         break;
       }
 
@@ -184,7 +184,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
 
       //Title Block Categories and Author Block
       $renblog_post_title   =   get_the_title($post->ID);
-      $rei_permalink        =   get_permalink($post->ID);  
+      $rei_permalink        =   get_permalink($post->ID);
 
       ?>
 
@@ -194,13 +194,13 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
                 <div class="blog-item text-center">
                   <div class="blog-item-display <?php echo $thumb_pos;?>">
             <?php
-            if(has_post_thumbnail()): 
+            if(has_post_thumbnail()):
                $thumbnail_img     =  wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'blog-one-thumb', true, '');
                $thumbnail_image   = '<img src="'.$thumbnail_img[0].'"  alt="'.get_the_title().'" class="img-responsive"/>';
             else:
                $thumbnail_image   = '';
             endif;
-            ?> 
+            ?>
 
 <?php
             $sec_blogformat = get_post_format();
@@ -210,16 +210,16 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
               case 'gallery':
                 $sec_blogsliderimages    =  get_post_meta($post->ID,'secret__post_slider',true);
                 if($sec_blogsliderimages !=''):
-                echo '<div class="owl-carousel blog-slider">';                           
-                          foreach ($sec_blogsliderimages as $sl_img) 
+                echo '<div class="owl-carousel blog-slider">';
+                          foreach ($sec_blogsliderimages as $sl_img)
                            {
                               echo ' <div class=""><img src="'.$sl_img.'" alt="Slide" class="img-responsive"/></div>';
-                           }                        
+                           }
                 echo  '</div>';
                 else:
                   echo $thumbnail_image;
-                endif;                   
-              break; 
+                endif;
+              break;
               //Audio Post
               case 'audio':
                $sec_blogaudio = get_post_meta($post->ID,'secret_post_audioembed',true);
@@ -229,7 +229,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
                     </div>';
                else:
                   echo $thumbnail_image;
-               endif; 
+               endif;
               break;
               //Video Post
               case 'video':
@@ -240,17 +240,17 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
                     </div>';
                else:
                   echo $thumbnail_image;
-               endif; 
+               endif;
               break;
 
               //Default Fall Back
               default:
                 echo $thumbnail_image;
-              break; 
+              break;
            }
 ?>
-                  </div>  
-                  <a href="<?php echo $rei_permalink ?>" target="_blank">  
+                  </div>
+                  <a href="<?php echo $rei_permalink ?>" target="_blank">
                     <div class="blog-item-text <?php echo $thumb_pos;?>">
                       <!--Pos Adjuster -->
                       <?php if($pos_img != ''):?>
@@ -260,14 +260,14 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
                       <h5><?php echo get_the_date('d'); ?>&nbsp;<?php echo get_the_date('M'); ?>, <?php echo get_the_date('Y'); ?></h5>
                       <p><?php echo get_the_excerpt();  ?></p>
                     </div>
-                  </a>  
+                  </a>
                 </div>
-      
+
 <?php
-       endif;  
-      endwhile; 
+       endif;
+      endwhile;
 ?>
- <!--Carousel--></section> 
+ <!--Carousel--></section>
               </div>
 
     </div>
@@ -275,7 +275,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
      <div class="text-center"><a href="<?php echo $secret_thm['blog_url']; ?>" target="_blank" class="button-01"><?php echo $secret_thm['more_blog_label']; ?></a></div>
     <?php endif; ?>
    </div>
- 
+
    </div>
   <?php echo $par_ovl_close; ?>
 
@@ -292,7 +292,7 @@ Default One-Page Section
 elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
 {
 
-//cooking Parallax Overlay 
+//cooking Parallax Overlay
   if($secret_enb_parallax == 'on')
   {
      $par_ovl_open  = '<div class="parallax-ovl" style="background:rgba('.secret_hex2rgb($secret_bg_color).',0.9);">';
@@ -303,7 +303,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
      $par_ovl_open ='';
      $par_ovl_close ='';
   }
-  
+
  //Padding Adjusters
   $padding = '';
   if($secret_pad_top !=''):
@@ -311,7 +311,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
   endif;
   if($secret_pad_bottom !=''):
    $padding   .= ' padding-bottom:'.$secret_pad_bottom.'px;';
-  endif;  
+  endif;
   if($secret_bg_image!=''): $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;"; else: $abj=''; endif;
 ?>
 
@@ -319,22 +319,22 @@ elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
   <?php echo $par_ovl_open; ?>
   <div style="<?php echo $padding; ?>">
 
-    
+
       <!-- Add Padding for container less pages -->
       <?php if($secret_enb_title != 'on'): ?>
-       <div class="container"> 
+       <div class="container">
         <div class="row">
           <div class="col-md-12">
 					 <h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1>
 					 <p class="sub-heading text-center"><?php echo $secret_page_subheading; ?></p>
-					</div>	
+					</div>
 				</div>
-        </div> 
+        </div>
      <?php endif; ?>
 
      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>></div>
     <?php if($secret_enb_container != 'on'): ?>
-     <div class="container">      
+     <div class="container">
       <?php the_content();?>
     </div>
     <?php else: ?>
@@ -347,7 +347,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
 
 
 
-<?php 
+<?php
 }
 endforeach;
-get_footer(); 
+get_footer();
