@@ -78,7 +78,7 @@ if($secret_include_onepage == 'on' AND $secret_filename == 'hero-section')
 
 ?>
 
-<div id="<?php echo $secret_new_title;?>" class="home full-height" >
+<div id="<?php echo $secret_new_title;?>" class="home full-height" style="background:<?php echo $abj; ?> <?php echo $secret_bg_color; ?>;">
   <?php echo $par_ovl_open; ?>
     <?php if($secret_enb_container != 'on'): ?>
      <div class="container">
