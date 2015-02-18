@@ -7,7 +7,7 @@ global $secret_thm;
 if($mode != 'onepage'):
   $mde =    "stuck";
   $mde_id = "navigationstuck";
-else:  
+else:
   $mde =    "";
   $mde_id = "navigation";
 endif;
@@ -29,19 +29,19 @@ $defaults = array(
 	'items_wrap'      => '<ul id="%1$s" class="desknav %2$s">%3$s</ul>',
 	'depth'           => 0,
 );
-wp_nav_menu($defaults);            
+wp_nav_menu($defaults);
 ?>
-<div class="text-center site-title-pos">
+            <!-- <div class="text-center site-title-pos">
               <a href="<?php echo site_url(); ?>">
-                 <?php 
+                 <?php
                  if($secret_thm['mainlogo']['url'] != ''):
-                  echo '<img class="img-responsive" src="'.$secret_thm['mainlogo']['url'].'" title="'.get_bloginfo('name').'" alt="'.get_bloginfo('name').'">';
+                  echo '<img class="img-responsive img-logo" src="'.$secret_thm['mainlogo']['url'].'" title="'.get_bloginfo('name').'" alt="'.get_bloginfo('name').'">';
                  else:
-                  echo get_bloginfo('name'); 
+                  echo get_bloginfo('name');
                  endif;
                  ?>
               </a>
-              </div>  
+            </div> -->
         </article>
       </div>
     </section>

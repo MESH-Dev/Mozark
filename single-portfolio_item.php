@@ -1,7 +1,7 @@
-<?php get_header(); 
+<?php get_header();
 
-    while(have_posts()) : the_post();     
-            if(has_post_thumbnail()): 
+    while(have_posts()) : the_post();
+            if(has_post_thumbnail()):
               $thumbnail_img     =  wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '', true, '');
                $bg_banner         = ' style="background:url('.$thumbnail_img[0].') center center; background-size:cover;" ';
             else:
@@ -21,7 +21,7 @@
                       if($wpcats):
                         $cats = array();
                          $cnt = 0;
-                         foreach ($wpcats as $c) 
+                         foreach ($wpcats as $c)
                           {
                               $cats[] = '<h4>' . $c->cat_name.'</h4>';
                               $cnt++;
@@ -30,7 +30,7 @@
                         echo " ".$lister;
                       endif;
                  ?>
-       </div>               
+       </div>
       </section>
     <!-- Blog-home : ends -->
 
@@ -40,10 +40,25 @@
     <!--  Blog Post Details Gallery : starts -->
       <!-- Container : starts -->
       <section id="single-project" class="single-project page-section">
+
+        <div class="row project-link">
+
+          <?php $prev_post = get_previous_post(); ?>
+          <?php if ( !empty( $prev_post ) ) : ?>
+              <a href="<?php echo get_permalink( $prev_post->ID ); ?>"><img src="<?php echo get_template_directory_uri();?>/images/single-project/left_arrow_big.png"></a>
+          <?php endif; ?>
+          <?php $next_post = get_next_post(); ?>
+          <?php $portfolio_page = get_page_by_title('Our Works'); ?>
+          <a href="<?php echo get_permalink($portfolio_page);?>"><img src="<?php echo get_template_directory_uri(); ?>/images/single-project/back_to_portfolio.png"></a>
+          <?php if ( !empty( $next_post ) ) : ?>
+              <a href="<?php echo get_permalink( $next_post->ID ); ?>"><img src="<?php echo get_template_directory_uri();?>/images/single-project/right_arrow_big.png"></a>
+          <?php endif; ?>
+
+        </div>
         <!-- Inner-section : starts -->
         <section class="inner-section">
           <!-- Container : starts -->
-          <div class="container">      
+          <div class="container">
 
 
 
@@ -51,7 +66,7 @@
 
 <?php endwhile; ?>
               <div class="row">
-              <div class="col-md-12"> 
+              <div class="col-md-12">
 
 <?php if(isset($secret_thm['port_standalone_pages']) AND $secret_thm['port_standalone_pages'] == 1 ): ?>
               <div class="single-project-share">
@@ -64,22 +79,7 @@
               </div>
 <?php endif; ?>
 
-                <div class="row project-link">
-
-
-
-    <?php $prev_post = get_previous_post(); ?>
-    <?php if ( !empty( $prev_post ) ) : ?>  
-            <a href="<?php echo get_permalink( $prev_post->ID ); ?>"><img src="<?php echo get_template_directory_uri();?>/images/single-project/left_arrow_big.png"></a>
-    <?php endif; ?>
-    <?php $next_post = get_next_post(); ?>
-    <a href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/images/single-project/back_to_portfolio.png"></a>    
-    <?php if ( !empty( $next_post ) ) : ?>  
-            <a href="<?php echo get_permalink( $next_post->ID ); ?>"><img src="<?php echo get_template_directory_uri();?>/images/single-project/right_arrow_big.png"></a>
-    <?php endif; ?>
-
-                </div>
-              </div>  
+              </div>
             </div>
 
 
@@ -93,7 +93,7 @@
 </section>
 
 
-   
+
 
 
 
@@ -110,7 +110,7 @@ if ($tags) {
         'post__not_in' => array($post->ID),
         'showposts'=>4, // Number of related posts that will be shown.
         'caller_get_posts'=>1,
-        'post_type' => 'portfolio_item', 
+        'post_type' => 'portfolio_item',
     );
     $my_query = new wp_query($args);
     if( $my_query->have_posts() ) {
@@ -137,7 +137,7 @@ if ($tags) {
             </div>
 
 
-          
+
         <?php
         }
 
@@ -146,14 +146,14 @@ if ($tags) {
           </div>
         </div>
      </section>
-   </section>  
+   </section>
 <?php
 
 }
 ?>
 
 
-       
+
 
 
 

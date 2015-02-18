@@ -6,7 +6,7 @@ global $secret_thm;
 if($mode != 'onepage'):
   $mde =    "stuck";
   $mde_id = "navigationstuck";
-else:  
+else:
   $mde =    "";
   $mde_id = "navigation";
 endif;
@@ -34,7 +34,7 @@ endif;
 $return = '';
 if($menu != '')
 {
-  $menu_items = wp_get_nav_menu_items($menu->term_id);    
+  $menu_items = wp_get_nav_menu_items($menu->term_id);
   $menunu = array();
   foreach((array)$menu_items as $key => $menu_item )
   {
@@ -47,12 +47,12 @@ if($menu != '')
     {
       $post_finder = get_post($men->object_id);
       $page_slug = $post_finder->post_name;
-      $newlink   = strtolower(preg_replace('/[^a-zA-Z]/s', '', $page_slug)); 
+      $newlink   = strtolower(preg_replace('/[^a-zA-Z]/s', '', $page_slug));
             //Other menu items
           //Specific additions add custom icons
         if( ( 'page' == $men->object ))
         {
-            $href =  '#'.$newlink;        
+            $href =  '#'.$newlink;
             $incl_onepage = get_post_meta($men->object_id,'secret_include_onepage',true );
             if($incl_onepage == 'on')
             {
@@ -63,9 +63,9 @@ if($menu != '')
             {
                 $href = $men->url;
                 $identifyClass = "not_onepage";
-            } 
-        } 
-        else 
+            }
+        }
+        else
         {
           $href =  $men->url;
           $identifyClass = "not_onepage";
@@ -82,7 +82,7 @@ if($menu != '')
 }
   else
   {
-    $return .= '';       
+    $return .= '';
   }
 
   echo $return;
@@ -93,17 +93,17 @@ if($menu != '')
 
                 </ul>
               </nav>
-              <div class="text-center site-title-pos">
-              <a href="<?php echo site_url(); ?>">
-                 <?php 
-                 if(isset($secret_thm['mainlogo']) AND $secret_thm['mainlogo']['url'] != ''):
-                  echo '<img class="img-responsive" src="'.$secret_thm['mainlogo']['url'].'" title="'.get_bloginfo('name').'" alt="'.get_bloginfo('name').'">';
-                 else:
-                  echo get_bloginfo('name'); 
-                 endif;
-                 ?>
-              </a>
-              </div>  
+              <!-- <div class="text-center site-title-pos">
+                <a href="<?php echo site_url(); ?>">
+                   <?php
+                   if(isset($secret_thm['mainlogo']) AND $secret_thm['mainlogo']['url'] != ''):
+                    echo '<img class="img-responsive img-logo" src="'.$secret_thm['mainlogo']['url'].'" title="'.get_bloginfo('name').'" alt="'.get_bloginfo('name').'">';
+                   else:
+                    echo get_bloginfo('name');
+                   endif;
+                   ?>
+                </a>
+              </div> -->
         </article>
       </div>
     </section>
@@ -111,27 +111,27 @@ if($menu != '')
   </section>
   <!-- inner-section : ends -->
 </nav>
-<?php } 
+<?php }
 
 
 
 
 function secret_detect_child($parent, $echo = false){
-    
+
   $parent = ($parent != "") ? $parent : '0';
   $locations = get_nav_menu_locations();
   $menu = wp_get_nav_menu_object( $locations[ 'onepmenu' ] );
   $menu_items = wp_get_nav_menu_items( $menu->term_id );
-  
+
   _wp_menu_item_classes_by_context( $menu_items );
-  
+
   $menu_next = array();
   foreach( (array) $menu_items as $key => $menu_item ){
     if($menu_item->menu_item_parent == $parent)
       $menu_next[ (int) $menu_item->db_id ] = $menu_item;
   }
   unset ($menu_items);
-  
+
   if( !$echo ){
     if( !empty($menu_next) )
       return true;
@@ -147,9 +147,9 @@ function secret_detect_child($parent, $echo = false){
         if( ( 'page' == $mnn->object ))
         {
           $post_finder = get_post($mnn->object_id);
-          $page_slug = $post_finder->post_name;                 
-          $newlink   = strtolower(preg_replace('/[^a-zA-Z]/s', '', $page_slug)); 
-          $href =  '#'.$newlink;        
+          $page_slug = $post_finder->post_name;
+          $newlink   = strtolower(preg_replace('/[^a-zA-Z]/s', '', $page_slug));
+          $href =  '#'.$newlink;
           $incl_onepage = get_post_meta($mnn->object_id,'secret_include_onepage',true );
 
             if($incl_onepage == 'on')
@@ -161,10 +161,10 @@ function secret_detect_child($parent, $echo = false){
             {
                 $href = $mnn->url;
                 $identifyClass = "not_onepage";
-            } 
+            }
 
-        } 
-        else 
+        }
+        else
         {
           $href =  $mnn->url;
           $identifyClass = "not_onepage";
@@ -177,10 +177,10 @@ function secret_detect_child($parent, $echo = false){
       }
       unset ($menu_next);
     $child_ul_close = '</ul>' . "\n";
-    
+
     if( !empty($ret) )
       return $child_ul . $ret . $child_ul_close;
-  }    
+  }
 
   }
 

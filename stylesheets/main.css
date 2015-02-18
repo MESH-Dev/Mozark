@@ -36,8 +36,8 @@ body{
 a, a:hover, a:focus{
 	text-decoration: none;
 }
-a:focus { 
-    	outline: none; 
+a:focus {
+    	outline: none;
 }
 p{
 	color: #d3d3d3;
@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6{
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------------------------------*/
-								/*Common Spacing and Padding*/						
+								/*Common Spacing and Padding*/
 /*--------------------------------------------------------------------------------*/
 
 .add-top{
@@ -110,11 +110,11 @@ h1,h2,h3,h4,h5,h6{
 
 /*--------------------------------------------------------------------------------*/
 								/* Common Objects */
-/*--------------------------------------------------------------------------------*/	
+/*--------------------------------------------------------------------------------*/
 
 .page-section{
 	padding-top: 125px;
-	padding-bottom: 125px;	
+	padding-bottom: 125px;
 }
 .inner-section{
 	text-align: center;
@@ -329,7 +329,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .main-header ul li:hover a{
 	color: #b3a68a;
-	
+
 }
 
 
@@ -354,8 +354,6 @@ h1,h2,h3,h4,h5,h6{
 .home-title{
 	padding-top: 50px;
 	padding-bottom: 50px;
-	border-top: 2px solid #fff;
-	border-bottom: 2px solid #fff;
 	display: inline-block;
 }
 .home-slider-item01 h2{
@@ -592,7 +590,7 @@ h1,h2,h3,h4,h5,h6{
 	 -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -o-transform: translateZ(0);
-    transform: translateZ(0);		
+    transform: translateZ(0);
 }
 .grey-scale-img:hover{
 	opacity: 1;
@@ -606,6 +604,23 @@ h1,h2,h3,h4,h5,h6{
 .team-member{
 	overflow: hidden;
 	position: relative;
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+.profile {
+	padding: 30px;
+	position: relative;
+	float: left;
+	height: 100%;
+}
+
+.team-container { float: left; }
+
+.profile p {
+	color: black;
+	font-family: 'Merriweather';
+	color: #7e7e7e;
 }
 .team-member:hover > .team-member-social-icons{
 	opacity: 1;
@@ -615,6 +630,8 @@ h1,h2,h3,h4,h5,h6{
 	background: #f6f6f6;
 	padding-top: 35px;
 	padding-bottom: 35px;
+	float: left;
+	width: 100%;
 }
 .team-member-name h4{
 	color: #000;
@@ -660,12 +677,13 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 0px !important;
 }
 .team-slider .owl-next{
-	background: url('../images/team/right_arrow.png') no-repeat!important;	
+	background: url('../images/team/right_arrow.png') no-repeat!important;
 	right: -4%;
 	width: 15px;
 	height: 25px;
 	border-radius: 0px !important;
 }
+
 
 /*--------------------------------------------------------------------------------*/
 								/*Portfolio*/
@@ -681,7 +699,7 @@ h1,h2,h3,h4,h5,h6{
 .portfolio-filter-nav ul{
 	padding-left: 0px;
 	list-style: none;
-} 
+}
 .portfolio-filter-nav ul li{
 	text-transform: uppercase;
 	display: inline-block;
@@ -693,7 +711,7 @@ h1,h2,h3,h4,h5,h6{
 	padding: 10px 20px;
 	font-size: 13px;
 	line-height: 20px;
-} 
+}
 .filter.active{
 	background: #b3a68a;
 }
@@ -710,7 +728,7 @@ h1,h2,h3,h4,h5,h6{
 	margin: 30px;
 	width: 275px;
 	height: 355px;
-	overflow: hidden;	
+	overflow: hidden;
 	-webkit-transition: all .8s ease-in-out;
 	   -moz-transition: all .8s ease-in-out;
 		-ms-transition: all .8s ease-in-out;
@@ -809,7 +827,7 @@ h1,h2,h3,h4,h5,h6{
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-} 
+}
 .testimonial-owl.owl-theme .owl-controls .owl-page span{
 	width: 14px !important;
 	height: 14px !important;
@@ -878,7 +896,7 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 0px !important;
 }
 .services-slider .owl-next{
-	background: url('../images/right_arrow.png') no-repeat!important;	
+	background: url('../images/right_arrow.png') no-repeat!important;
 	right: -4%;
 	width: 15px;
 	height: 25px;
@@ -915,7 +933,7 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 12px;
 	line-height: 19px;
 	text-transform: uppercase;
-	display: inline-block;	
+	display: inline-block;
 }
 .pricing-head h1{
 	font-size: 60px;
@@ -1087,7 +1105,7 @@ h1,h2,h3,h4,h5,h6{
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-} 
+}
 .blog-slider.owl-theme .owl-controls .owl-page span{
 	width: 12px !important;
 	height: 12px !important;
@@ -1111,8 +1129,14 @@ h1,h2,h3,h4,h5,h6{
 /*--------------------------------------------------------------------------------*/
 
 .contact{
-/*	background: url('../images/contact/bg-image.jpg') no-repeat;*/
+	background: url('../images/contact/bg-image.jpg') no-repeat;
 	background-size: cover;
+}
+.contact-address {
+	padding: 40px 0;
+	margin-bottom: 70px;
+	background: #e7e7e7;
+	text-align: center;
 }
 .contact-address h1{
 	margin-bottom: 0px;
@@ -1467,7 +1491,7 @@ h1,h2,h3,h4,h5,h6{
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-} 
+}
 .blog-post-slider.owl-theme .owl-controls .owl-page span{
 	width: 12px !important;
 	height: 12px !important;
@@ -1497,7 +1521,7 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 0px !important;
 }
 .blog-post-slider .owl-next{
-	background: url('../images/blogs/right_arrow.png') !important;	
+	background: url('../images/blogs/right_arrow.png') !important;
 	right: 2%;
 	width: 45px;
 	height: 45px;
@@ -1562,7 +1586,7 @@ h1,h2,h3,h4,h5,h6{
 	color: #000;
 }
 .button a{
-	margin-bottom: 0px;	
+	margin-bottom: 0px;
 }
 .button:hover{
 	background: #b3a68a;
@@ -1586,7 +1610,7 @@ h1,h2,h3,h4,h5,h6{
 	background: #fff;
 }
 .blog-post-text.blog-post-details-text p{
-	text-align: left;
+	text-align: center;
 }
 .blog-post-text.blog-post-details-text{
 	padding-left: 0px;
@@ -1816,7 +1840,7 @@ h1,h2,h3,h4,h5,h6{
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-} 
+}
 .single-project-slider.owl-theme .owl-controls .owl-page span{
 	width: 12px !important;
 	height: 12px !important;
@@ -1846,7 +1870,7 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 0px !important;
 }
 .single-project-slider .owl-next{
-	background: url('../images/single-project/right_arrow.png') no-repeat!important;	
+	background: url('../images/single-project/right_arrow.png') no-repeat!important;
 	right: 2%;
 	width: 45px;
 	height: 45px;
@@ -1914,6 +1938,9 @@ h1,h2,h3,h4,h5,h6{
 }
 .single-project-details .button-02{
 	margin-top: 40px;
+}
+.project-link {
+	text-align: center;
 }
 .project-link img{
 	margin-left: 10px;

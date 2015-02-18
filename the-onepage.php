@@ -124,7 +124,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
   endif;
   if($secret_bg_image!=''): $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;"; else: $abj=''; endif;
 ?>
-<section id="<?php echo $secret_new_title;?>" class="page-section" style="background:<?php echo $abj; ?> <?php echo $secret_bg_color; ?>;">
+<section id="<?php echo $secret_new_title;?>" class="page-section">
   <?php echo $par_ovl_open; ?>
   <div style="<?php echo $padding; ?>">
 
@@ -315,7 +315,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
   if($secret_bg_image!=''): $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;"; else: $abj=''; endif;
 ?>
 
-<section id="<?php echo $secret_new_title;?>" class="page-section" style="background:<?php echo $abj; ?> <?php echo $secret_bg_color; ?>;">
+<section id="<?php echo $secret_new_title;?>" class="page-section">
   <?php echo $par_ovl_open; ?>
   <div style="<?php echo $padding; ?>">
 

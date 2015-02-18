@@ -1,8 +1,8 @@
-<?php get_header(); 
+<?php get_header();
 
-    while(have_posts()) : the_post();     
+    while(have_posts()) : the_post();
 
-            if(has_post_thumbnail()): 
+            if(has_post_thumbnail()):
               $thumbnail_img     =  wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '', true, '');
                $bg_banner         = ' style="background:url('.$thumbnail_img[0].') center center; background-size:cover;" ';
             else:
@@ -22,11 +22,11 @@
                       if($wpcats):
                         $cats = array();
                          $cnt = 0;
-                         foreach ($wpcats as $c) 
+                         foreach ($wpcats as $c)
                           {
                               $cats[] = '<h4>' . $c->cat_name.'</h4>';
-                              
-                              
+
+
 
                               $cnt++;
                           }
@@ -34,7 +34,7 @@
                         echo " ".$lister;
                       endif;
                  ?>
-       </div>               
+       </div>
       </section>
     <!-- Blog-home : ends -->
 
@@ -57,18 +57,21 @@
               case 'gallery':
                 $secret_sliderimages    =  get_post_meta($post->ID,'secret__post_slider',true);
                 if($secret_sliderimages !=''):
-                echo '<div class="blog-post-gallery owl-carousel blog-post-slider">';                           
-                          foreach ($secret_sliderimages as $sl_img) 
+                echo '<div class="blog-post-gallery owl-carousel blog-post-slider">';
+                          foreach ($secret_sliderimages as $sl_img)
                            {
                               echo ' <div><img src="'.$sl_img.'" alt="Slide" /></div>';
-                           }                        
+                           }
                 echo  '</div>';
                 else:
-                echo '<div class="blog-single-image">';
-                 the_post_thumbnail('full', array('class' => "img-responsive",) );
-                echo '</div>';
-                endif;                  
-              break; 
+                  if( get_field('show_featured_image_on_blog_post') )
+                  {
+                    echo '<div class="blog-single-image">';
+                     the_post_thumbnail('full', array('class' => "img-responsive",) );
+                    echo '</div>';
+                  }
+                endif;
+              break;
               //Audio Post
               case 'audio':
                $theme_post_audio = get_post_meta($post->ID,'secret_post_audioembed',true);
@@ -77,10 +80,13 @@
                    '.$theme_post_audio.'
                     </div>';
                else:
-                echo '<div class="blog-single-image">';
-                 the_post_thumbnail('full', array('class' => "img-responsive",) );
-                echo '</div>';
-               endif; 
+                 if( get_field('show_featured_image_on_blog_post') )
+                 {
+                   echo '<div class="blog-single-image">';
+                    the_post_thumbnail('full', array('class' => "img-responsive",) );
+                   echo '</div>';
+                 }
+               endif;
               break;
               //Video Post
               case 'video':
@@ -90,24 +96,30 @@
                    '.$thm_post_video.'
                     </div>';
                else:
-                echo '<div class="blog-single-image">';
-                 the_post_thumbnail('full', array('class' => "img-responsive",) );
-                echo '</div>';
-               endif; 
+                 if( get_field('show_featured_image_on_blog_post') )
+                 {
+                   echo '<div class="blog-single-image">';
+                    the_post_thumbnail('full', array('class' => "img-responsive",) );
+                   echo '</div>';
+                 }
+               endif;
               break;
 
               //Default Fall Back
               default:
+              if( get_field('show_featured_image_on_blog_post') )
+              {
                 echo '<div class="blog-single-image">';
                  the_post_thumbnail('full', array('class' => "img-responsive",) );
                 echo '</div>';
-              break; 
+              }
+              break;
 
 
 
 
 
-            } //Switch case ends 
+            } //Switch case ends
   ?>
 
 
@@ -117,14 +129,14 @@
 
 
 
-              <div class="blog-post-text blog-post-details-text"> 
+              <div class="blog-post-text blog-post-details-text">
                 <h1 class="text-center"><?php the_title(); ?></h1>
                      <h5 class="text-center"><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'),get_the_time('d')); ?>"><span class="stat_hl"><?php echo get_the_date('F jS'); ?></span></a> / <?php _e('By','secretlang'); ?> <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><span class="stat_hl"><?php the_author(); ?></span></a> / <?php _e('in','secretlang'); ?>
                      <?php
                      $wpcats = get_the_category();
                       if($wpcats):
                         $cats = array();
-                         foreach ($wpcats as $c) 
+                         foreach ($wpcats as $c)
                           {
                               $cats[] = '<a href="'.get_category_link($c->term_id).'"><span class="stat_hl">' . $c->cat_name.'</span></a>';
                           }
@@ -135,7 +147,7 @@
 
                       <?php the_content(); ?>
                       <?php wp_link_pages(); ?>
-                
+
               </div>
 
               <div class="blog-post-share">
@@ -156,17 +168,17 @@
 
               </div>
             </div>
-          </div>  
+          </div>
         </section>
       </section>
       <!-- Container : ends -->
     <!-- Blog Post Details Gallery : ends -->
 
 
- <?php 
+ <?php
     if (comments_open() || get_comments_number() ) {
             comments_template();
-    
+
     }
   ?>
 
@@ -212,7 +224,7 @@ if ($tags) {
             </a>
 
 
-          
+
         <?php
         }
 
@@ -221,14 +233,14 @@ if ($tags) {
           </div>
         </div>
      </section>
-   </section>  
+   </section>
 <?php
 
 }
 ?>
 
 
-       
+
 
 
 

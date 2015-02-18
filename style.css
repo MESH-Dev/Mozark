@@ -15,14 +15,14 @@ Tags: light,dark,theme-options, translation-ready
 
 Project:        Hymaze WordPress
 Version:        1.0
-Last change:    
-Primary use:    Generic Styles 
+Last change:
+Primary use:    Generic Styles
 -------------------------------------------------------------------*/
 
 /*--------------------------------------------------------*/
 /* TABLE OF CONTENTS: */
 /*--------------------------------------------------------*/
-/* 
+/*
     00 - Global Adjusters
     01 - Wordpress Core Styles
     02 - Page Content Style Adjusters
@@ -31,7 +31,7 @@ Primary use:    Generic Styles
     05 - Posts Style Adjusters
     06 - Custom CSS Hooks
     07 - Social Buttons
-    08 - Footer Overrides 
+    08 - Footer Overrides
 */
 
 /*--------------------------------------------------------*/
@@ -84,7 +84,7 @@ h1,h2,h3,h4,h5,h6
 {
      background: red;
     color: #FFF;
-    padding: 2px;   
+    padding: 2px;
 }
 .gallery-caption {
     background-color: rgba(0, 0, 0, 0.7);
@@ -135,7 +135,7 @@ h1,h2,h3,h4,h5,h6
     display: block;
     margin: 10px auto;
 }
-.alignnone 
+.alignnone
 {
     max-width: 100%;
 }
@@ -175,15 +175,15 @@ h1,h2,h3,h4,h5,h6
             width:100%;
             border: #444 solid 1px !important;
             color: #FFF !important;
-            
-            
+
+
         }
          #calendar_wrap{
 
             margin:15px auto;
             width:100%;
             /*margin-top: 40px;*/
-            
+
         }
 
         #wp-calendar caption{
@@ -193,22 +193,22 @@ h1,h2,h3,h4,h5,h6
             text-transform: uppercase;
             border-bottom: rgba(0,0,0,.2) solid 3px;
             background: #444444 !important;
-            
+
         }
         #wp-calendar thead{
             margin-bottom: 10px;
             background: #444444 !important;
         }
-        
+
         #wp-calendar th{
             color: #FFF !important;
-            
+
         }
 
         #wp-calendar th, #wp-calendar td{
             padding: 5px;
             text-align:center;
-            
+
             background: #444444;
         }
         #wp-calendar td{
@@ -220,7 +220,7 @@ h1,h2,h3,h4,h5,h6
             padding: 0px;
             border:none;
             color:#444444;
-            
+
         }
         #wp-calendar td a:hover{text-shadow:0px 0px 6px #FFF; text-decoration: none;}
         #wp-calendar td{
@@ -454,7 +454,7 @@ td {
 /*--------------------------------------
 07 Social Buttons
 ------------------------------------------*/
-.btn-social 
+.btn-social
 {
     padding: 5px;
     display: block;
@@ -475,7 +475,7 @@ td {
     text-decoration: none;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
-    transition: all 0.3s;   
+    transition: all 0.3s;
 }
 
 
@@ -639,10 +639,6 @@ td {
  }
 .site-title-pos {
     /*color: #fff !important;*/
-    z-index:99 !important;
-    position: absolute;
-    top: 18px;
-    left: 47.8%;
     font-family: 'RalewayHeavy';
     font-size: 24px;
     color: #FFF;
@@ -659,7 +655,7 @@ td {
 }
 .desknav li{
     display: inline-block;
-    padding: 35px 20px 25px 20px;
+    padding: 35px 15px 25px 15px;
     color: #DFDFDF;
     text-transform: uppercase;
 }
@@ -672,15 +668,6 @@ td {
     color: #B3A68A;
 }
 
-
-.desknav li:nth-child(4) {
-    padding-right: 80px;
-}
-
-.desknav li:nth-child(5) {
-    padding-left: 80px;
-}
-
 .stuck
 {
   position: fixed;
@@ -690,22 +677,22 @@ td {
   width: 100%;
     background: #fff;
     -webkit-box-shadow: 0px 0px 4px 0px #888;
-    box-shadow: 0px 0px 4px 0px #888;  
+    box-shadow: 0px 0px 4px 0px #888;
 }
 .desknav li:hover > ul{
-    display:block;   
-    opacity: 1;    
+    display:block;
+    opacity: 1;
 }
 .desknav li ul
 {
-    list-style:none; 
+    list-style:none;
     opacity: 1;
-    display:none; 
+    display:none;
     position: absolute;
     z-index:99999;
     border-radius:3px 0 0 3px !important;
 /*    border: solid 4px rgba(255,255,225,0.8);   */
-    border-right: none; 
+    border-right: none;
     margin:0;
     margin-left: 20px;
     /*margin-top: 12px;*/
@@ -720,26 +707,26 @@ td {
     transition: all 0.3s linear;   */
 }
 
-.desknav li ul:after 
-{ 
- bottom: 100%; 
+.desknav li ul:after
+{
+ bottom: 100%;
  top: -1px;
- border: solid transparent; content: " "; 
- height: 0; 
- width: 0; 
+ border: solid transparent; content: " ";
+ height: 0;
+ width: 0;
  position: absolute;
  pointer-events: none;
  z-index: 99999;
 
-} 
-.desknav li ul:after 
- { 
+}
+.desknav li ul:after
+ {
   border-color: rgba(68, 68, 68, 0);
-  border-bottom-color: #111; 
-  border-width: 8px; 
-  left: 5.5%; 
-  margin-left: -8px; 
-  
+  border-bottom-color: #111;
+  border-width: 8px;
+  left: 5.5%;
+  margin-left: -8px;
+
  }
 
 
@@ -747,7 +734,7 @@ td {
 
 .desknav li ul li
 {
-    padding:5px !important; 
+    padding:5px !important;
     text-align: left;
     background:#111111;
     width:190px;
@@ -758,7 +745,7 @@ td {
     -moz-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     -ms-transition: all 0.3s linear;
-    transition: all 0.3s linear;  
+    transition: all 0.3s linear;
 
 }
 
@@ -775,8 +762,8 @@ td {
 }
 .desknav li ul li a
 {
-    color:#FFF !important; 
-    font-size:12px !important; 
+    color:#FFF !important;
+    font-size:12px !important;
     line-height: 19px;
     /*margin-bottom:1px;*/
      -webkit-transition: all 0.3s linear;
@@ -1046,4 +1033,19 @@ My Custom Hooks
 .blog-post-share-text a
 {
     color:#7e7e7e
+}
+
+.img-logo { margin: auto; }
+
+@media (max-width: 1200px) {
+  .profile p { font-size: 13px; }
+}
+
+@media (max-width: 960px) {
+  .profile p { font-size: 12px; line-height: 20px; }
+}
+
+@media (max-width: 800px) {
+  .profile { display: none; }
+  .team-member { width: 100%; }
 }
