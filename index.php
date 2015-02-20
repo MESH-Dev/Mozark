@@ -3,12 +3,12 @@
 ?>
     <!-- Blog-home : starts -->
       <section id="blog-details-home" class="blog-home text-center color-light blog-header-section">
-
+      <div class="blog-home-overlay" style="background:rgba(0,0,0,0.5)">
         <h1><?php echo get_bloginfo('name'); ?></h1>
                      <?php
                      echo get_bloginfo('description');
                  ?>
-      
+       </div>
       </section>
     <!-- Blog-home : ends -->
 
