@@ -14,7 +14,7 @@
 
     <!-- Blog-home : starts -->
       <section id="blog-details-home" class="blog-home text-center color-light blog-header-section" <?php echo $bg_banner;?>>
-      <div class="blog-home-overlay" style="background:rgba(0,0,0,0.5)">
+      <div class="blog-home-overlay" >
         <h1><?php the_title(); ?></h1>
                      <?php
                      $wpcats = get_categories(array('type' => 'portfolio_item', 'taxonomy' => 'portfolio_category'));

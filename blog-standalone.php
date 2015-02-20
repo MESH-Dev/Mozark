@@ -19,7 +19,7 @@ $secret_page_subheading   =  get_post_meta($post->ID,'secret_page_subheading',tr
  ?>
     <!-- Blog-home : starts -->
       <section id="blog-details-home" class="blog-home text-center color-light blog-header-section" style="background:<?php echo $abj;?>">
-      <div class="blog-home-overlay" style="background:rgba(0,0,0,0.5)">
+      <div class="blog-home-overlay" >
         <h1><?php echo $post->post_title; ?></h1>
                      <?php
                      echo $secret_page_subheading
