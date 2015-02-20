@@ -348,8 +348,6 @@ if (typeof Object.create !== "function") {
         calculateWidth : function () {
             var base = this;
 
-            console.log(base);
-
             if (base.itemsAmount == 2) {
               base.itemWidth = Math.round(base.$elem.width() / base.itemsAmount);
             } else {
@@ -606,6 +604,7 @@ if (typeof Object.create !== "function") {
         },
 
         goTo : function (position, speed, drag) {
+
             var base = this,
                 goToPixel;
 
@@ -924,6 +923,7 @@ if (typeof Object.create !== "function") {
             }
 
             function dragStart(event) {
+
                 var ev = event.originalEvent || event || window.event,
                     position;
 
@@ -1478,7 +1478,7 @@ if (typeof Object.create !== "function") {
         paginationSpeed : 800,
         rewindSpeed : 1000,
 
-        autoPlay : false,
+        autoPlay : true,
         stopOnHover : false,
 
         navigation : false,

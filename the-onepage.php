@@ -124,7 +124,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
   endif;
   if($secret_bg_image!=''): $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;"; else: $abj=''; endif;
 ?>
-<section id="<?php echo $secret_new_title;?>" class="page-section">
+<section id="<?php echo $secret_new_title;?>" class="page-section" <?php if ($secret_new_title == 'testimonial') { ?> style="background:<?php echo $abj; ?> <?php echo $secret_bg_color; ?>;" <?php } ?>>
   <?php echo $par_ovl_open; ?>
   <div style="<?php echo $padding; ?>">
 
@@ -133,7 +133,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
        <div class="container">
         <div class="row">
                 <div class="col-md-12">
-          <h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1>
+          <a href="<?php echo get_permalink($secret_pag->ID); ?>"><h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1></a>
           <p class="sub-heading text-center"><?php echo $secret_page_subheading; ?></p>
           </div>
         </div>
@@ -315,7 +315,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
   if($secret_bg_image!=''): $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;"; else: $abj=''; endif;
 ?>
 
-<section id="<?php echo $secret_new_title;?>" class="page-section">
+<section id="<?php echo $secret_new_title;?>" class="page-section" <?php if ($secret_new_title == 'testimonial') { ?> style="background:<?php echo $abj; ?> <?php echo $secret_bg_color; ?>;" <?php } ?>>
   <?php echo $par_ovl_open; ?>
   <div style="<?php echo $padding; ?>">
 
@@ -325,7 +325,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
        <div class="container">
         <div class="row">
           <div class="col-md-12">
-					 <h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1>
+            <a href="<?php echo get_permalink($secret_pag->ID); ?>"><h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1></a>
 					 <p class="sub-heading text-center"><?php echo $secret_page_subheading; ?></p>
 					</div>
 				</div>

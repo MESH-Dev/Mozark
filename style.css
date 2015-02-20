@@ -642,7 +642,10 @@ td {
     font-family: 'RalewayHeavy';
     font-size: 24px;
     color: #FFF;
-
+    z-index: 99 !important;
+    position: absolute;
+    left: 44%;
+    top: 13px;
 }
 .site-title-pos a
 {
@@ -650,7 +653,7 @@ td {
 }
 .desknav
 {
-    margin-left: 0;
+    margin-left: -50px;
     padding-left: 0;
 }
 .desknav li{
@@ -666,6 +669,14 @@ td {
 .desknav li a:hover
 {
     color: #B3A68A;
+}
+
+.desknav li:nth-child(4) {
+    padding-right: 90px;
+}
+
+.desknav li:nth-child(5) {
+    padding-left: 90px;
 }
 
 .stuck
@@ -1037,13 +1048,6 @@ My Custom Hooks
 
 .img-logo { margin: auto; }
 
-@media (max-width: 1200px) {
-  .profile p { font-size: 13px; }
-}
-
-@media (max-width: 960px) {
-  .profile p { font-size: 12px; line-height: 20px; }
-}
 
 @media (max-width: 800px) {
   .profile { display: none; }
