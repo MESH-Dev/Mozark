@@ -26,16 +26,16 @@ $secret_page_subheading   =  get_post_meta($post->ID,'secret_page_subheading',tr
     <!--  Blog Post Details Gallery : starts -->
       <!-- Container : starts -->
       <section id="blog-post-gallery" class="container pad-top-50 pad-bottom-50">
-        <section class="row">
-          <div class="col-md-12">
+        <div class="row single-project-content">
+          <article class="col-md-9 col-lg-9 single-project-text text-left">
+            <?php the_content(); ?>
+          </article>
+          <article class="col-md-3 col-lg-3 single-project-details text-left">
+            <?php the_field('sidebar'); ?>
+          </article>
+        </div>
+        <div class="row">
 
-
-              <div class="blog-post-text">
-
-                      <?php the_content(); ?>
-
-                <div class="clearfix"></div>
-              </div>
              <?php if(isset($secret_thm['standalone_pages']) AND $secret_thm['standalone_pages'] == 1 ): ?>
               <div class="single-project-share">
                   <h4><?php _e('Share','secretlang'); ?></h4>
@@ -47,8 +47,7 @@ $secret_page_subheading   =  get_post_meta($post->ID,'secret_page_subheading',tr
               </div>
             <?php endif; ?>
 
-          </div>
-        </section>
+        </div>
       </section>
       <!-- Container : ends -->
     <!-- Blog Post Details Gallery : ends -->
