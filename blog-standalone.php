@@ -5,34 +5,34 @@
  * @author Unbranded (unbranded.com)
  * @theme Unbranded - Creative
  */
- get_header(); 
+ get_header();
 
-while(have_posts()) : the_post();     
+while(have_posts()) : the_post();
 $secret_bg_image           =   get_post_meta($post->ID,'secret_page_bg',true);
-  if($secret_bg_image!=''): 
-    $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;"; 
-  else: 
-    $abj=''; 
+  if($secret_bg_image!=''):
+    $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;";
+  else:
+    $abj='';
   endif;
 $secret_page_subheading   =  get_post_meta($post->ID,'secret_page_subheading',true);
 
  ?>
     <!-- Blog-home : starts -->
       <section id="blog-details-home" class="blog-home text-center color-light blog-header-section" style="background:<?php echo $abj;?>">
-      <div class="blog-home-overlay" style="background:rgba(0,0,0,0.5)">
+
         <h1><?php echo $post->post_title; ?></h1>
                      <?php
-                     echo $secret_page_subheading 
+                     echo $secret_page_subheading
                  ?>
-       </div>               
+      
       </section>
     <!-- Blog-home : ends -->
 <?php endwhile; ?>
 <div class="pad-top pad-bottom">
 <?php
 $loop = new WP_Query( array( 'post_type' => 'post',  'paged' => $paged ,'order'=>'desc'));
-if ( $loop !='' ):        
-while ($loop->have_posts()) : $loop->the_post();     
+if ( $loop !='' ):
+while ($loop->have_posts()) : $loop->the_post();
 ?>
 
       <section id="blog-standard-post"class="container  pad-bottom-half">
@@ -47,18 +47,18 @@ while ($loop->have_posts()) : $loop->the_post();
               case 'gallery':
                 $secret_sliderimages    =  get_post_meta($post->ID,'secret__post_slider',true);
                 if($secret_sliderimages !=''):
-                echo '<div class="owl-carousel blog-post-slider">';                           
-                          foreach ($secret_sliderimages as $sl_img) 
+                echo '<div class="owl-carousel blog-post-slider">';
+                          foreach ($secret_sliderimages as $sl_img)
                            {
                               echo ' <div><img src="'.$sl_img.'" alt="Slide" /></div>';
-                           }                        
+                           }
                 echo  '</div>';
                 else:
                 echo '<div class="blog-single-image">';
                  the_post_thumbnail('full', array('class' => "img-responsive",) );
                 echo '</div>';
-                endif;                  
-              break; 
+                endif;
+              break;
               //Audio Post
               case 'audio':
                $theme_post_audio = get_post_meta($post->ID,'secret_post_audioembed',true);
@@ -70,7 +70,7 @@ while ($loop->have_posts()) : $loop->the_post();
                 echo '<div class="blog-single-image">';
                  the_post_thumbnail('full', array('class' => "img-responsive",) );
                 echo '</div>';
-               endif; 
+               endif;
               break;
               //Video Post
               case 'video':
@@ -83,7 +83,7 @@ while ($loop->have_posts()) : $loop->the_post();
                 echo '<div class="blog-single-image">';
                  the_post_thumbnail('full', array('class' => "img-responsive",) );
                 echo '</div>';
-               endif; 
+               endif;
               break;
 
               //Default Fall Back
@@ -91,21 +91,21 @@ while ($loop->have_posts()) : $loop->the_post();
                 echo '<div class="blog-single-image">';
                  the_post_thumbnail('full', array('class' => "img-responsive",) );
                 echo '</div>';
-              break; 
+              break;
 
-            } //Switch case ends 
+            } //Switch case ends
 ?>
               <div class="blog-post-text">
-            <?php if(is_sticky()): 
-                   echo '<div class="stick_icon"><img src="'.get_template_directory_uri().'/images/sticky.png" alt="sticky"/></div>'; 
-            endif; ?>                 
+            <?php if(is_sticky()):
+                   echo '<div class="stick_icon"><img src="'.get_template_directory_uri().'/images/sticky.png" alt="sticky"/></div>';
+            endif; ?>
                 <h1><?php the_title(); ?></h1>
                 <h5><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'),get_the_time('d')); ?>"><span class="stat_hl"><?php echo get_the_date('F jS'); ?></span></a> / <?php _e('By','secretlang'); ?> <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><span class="stat_hl"><?php the_author(); ?></span></a> / <?php _e('in','secretlang'); ?>
                      <?php
                      $wpcats = get_the_category();
                       if($wpcats):
                         $cats = array();
-                         foreach ($wpcats as $c) 
+                         foreach ($wpcats as $c)
                           {
                               $cats[] = '<a href="'.get_category_link($c->term_id).'"><span class="stat_hl">' . $c->cat_name.'</span></a>';
                           }
@@ -117,12 +117,12 @@ while ($loop->have_posts()) : $loop->the_post();
                 <a class="button-01" href="<?php echo get_permalink(); ?>"><?php _e('Read More','secretlang'); ?></a>
               </div>
             </div>
-          </div>  
+          </div>
         </section>
       </section>
 
 
-<?php 
+<?php
 endwhile;
 
 ?>
@@ -132,7 +132,7 @@ endwhile;
       <section class="container text-center ">
         <section class="row">
           <div class="col-md-2">
-            <?php next_posts_link( '&larr; Older Posts', $loop->max_num_pages ); ?>   
+            <?php next_posts_link( '&larr; Older Posts', $loop->max_num_pages ); ?>
           </div>
          <div class="col-md-2 col-md-offset-8">
             <?php previous_posts_link( 'Newer Posts&rarr;' );  ?>
@@ -140,7 +140,7 @@ endwhile;
         </section>
       </section>
     <!-- Container : ends -->
-<?php    
+<?php
 endif;
 ?>
 </div>
