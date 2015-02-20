@@ -1,6 +1,6 @@
-<?php get_header(); 
-global $secret_thm; 
-while(have_posts()) : the_post();     
+<?php get_header();
+global $secret_thm;
+while(have_posts()) : the_post();
 $secret_bg_image        =   get_post_meta($post->ID,'secret_page_bg',true);
 if($secret_bg_image!=''): $abj = "url('".$secret_bg_image."') center top no-repeat; background-size:cover;"; else: $abj=''; endif;
 $secret_page_subheading   =  get_post_meta($post->ID,'secret_page_subheading',true);
@@ -14,9 +14,9 @@ $secret_page_subheading   =  get_post_meta($post->ID,'secret_page_subheading',tr
       <div class="blog-home-overlay" style="background:rgba(0,0,0,0.5)">
         <h1><?php the_title(); ?></h1>
                      <?php
-                     echo $secret_page_subheading 
+                     echo $secret_page_subheading
                  ?>
-       </div>               
+       </div>
       </section>
     <!-- Blog-home : ends -->
 
@@ -28,9 +28,9 @@ $secret_page_subheading   =  get_post_meta($post->ID,'secret_page_subheading',tr
       <section id="blog-post-gallery" class="container pad-top-50 pad-bottom-50">
         <section class="row">
           <div class="col-md-12">
-            <div class="text-center">
 
-              <div class="blog-post-text blog-post-details-text"> 
+
+              <div class="blog-post-text">
 
                       <?php the_content(); ?>
 
@@ -46,18 +46,18 @@ $secret_page_subheading   =  get_post_meta($post->ID,'secret_page_subheading',tr
                 <div class="float-clear"></div>
               </div>
             <?php endif; ?>
-            </div>
-          </div>  
+
+          </div>
         </section>
       </section>
       <!-- Container : ends -->
     <!-- Blog Post Details Gallery : ends -->
 
 
- <?php 
+ <?php
     if (comments_open() || get_comments_number() ) {
             comments_template();
-    
+
     }
   ?>
 
@@ -101,7 +101,7 @@ if ($tags) {
             </div>
 
 
-          
+
         <?php
         }
 
@@ -110,14 +110,14 @@ if ($tags) {
           </div>
         </div>
      </section>
-   </section>  
+   </section>
 <?php
 
 }
 ?>
 
 
-       
+
 
 
 

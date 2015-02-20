@@ -133,7 +133,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename == 'blog-section')
        <div class="container">
         <div class="row">
                 <div class="col-md-12">
-          <a href="<?php echo get_permalink($secret_pag->ID); ?>"><h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1></a>
+          <a href="<?php if($secret_new_title == 'ouruniqueteam') { echo get_permalink(312); } else { echo get_permalink($secret_pag->ID); } ?>"><h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1></a>
           <p class="sub-heading text-center"><?php echo $secret_page_subheading; ?></p>
           </div>
         </div>
@@ -325,7 +325,7 @@ elseif($secret_include_onepage == 'on' && $secret_filename != 'the-onepage')
        <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <a href="<?php echo get_permalink($secret_pag->ID); ?>"><h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1></a>
+            <a href="<?php if($secret_new_title == 'ouruniqueteam') { echo get_permalink(312); } else { echo get_permalink($secret_pag->ID); } ?>"><h1 class="section-heading text-center animated" style="color:<?php echo $secret_title_color; ?>" data-fx="<?php echo $secret_heading_animation; ?>"><?php echo $secret_page_heading; ?></h1></a>
 					 <p class="sub-heading text-center"><?php echo $secret_page_subheading; ?></p>
 					</div>
 				</div>
